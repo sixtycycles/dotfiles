@@ -10,10 +10,10 @@ plugins=(
   osx
   django
   virtualenv
-  pip
-  vagrant
   git
   docker
+  zsh-syntax-highlighting
+  vi-mode
 )
 source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
