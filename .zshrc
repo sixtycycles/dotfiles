@@ -1,42 +1,49 @@
-# in case i want to use this somewhere else, we're putting it on there.
-export ZSH="/Users/rod/.oh-my-zsh"
-ZSH_THEME="eastwood"
-CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
-# HIST_STAMPS="mm/dd/yyyy"
+export TERM=xterm
+export WWW_HOME=https://duckduckgo.com
 
-plugins=(
-  git
-  osx
-  django
-  virtualenv
-  git
-  docker
-  zsh-syntax-highlighting 
-  vi-mode
-)
+source ~/dotfiles/antigen.zsh
+source ~/dotfiles/.secret_aliases
 
-source $ZSH/oh-my-zsh.sh
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
 
-# 
- if [[ -n $SSH_CONNECTION ]]; then
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle python
+antigen bundle django
+antigen bundle docker
+antigen bundle osx
+antigen bundle virtualenv
+antigen bundle robbyrussell/oh-my-zsh plugins/extract
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen theme eastwood
+antigen apply
+
+if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
    export EDITOR='vim'
  fi
-export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+   export CLICOLOR=1
+   export LSCOLORS=ExFxBxDxCxegedabagacad
 
 #aliases stuff
-alias ll='ls -alFh'
+alias ll='ls -alh'
 alias la='ls -Ah'
 alias l='ls -CF'
-alias lsl="ls -lhFA | less"
-# i cant remember things
-alias untar='tar -zxvf'
-#linux only.
-#alias du="du -ach | sort -h"
-#alias top="htop"
-#alias df="df -Tha --total"
-#alias free="free -ht"
+alias lsl="ls -lhA | less"
+
+#this does a ls on entry into a directory. 
+function elel(){
+  emulate -L zsh
+  ls -lha
+}
+chpwd_functions=(${chpwd_functions[@]} 'elel')
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
