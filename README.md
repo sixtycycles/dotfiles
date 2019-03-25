@@ -1,10 +1,14 @@
 # dotfiles
 various .files
-.zshrc cause im having fun with alternate shells
 
-.bashrc so i can grab these from work.
+to use:
+stash this repo in ~. then run
+`ln -s ~/dotfiles/.zshrc /.zshrc`
 
-bash_private_aliases is not included because they're all ssh shortcuts 
-and that would be a bad thing to publish.
+the file called `.secret_aliases` is all just ssh connections wrapped in an alias cause im lazy. 
 
+using, antigen and oh-my-zsh for plugins ect becase they're nice. 
+
+may work to varying degrees across U(li)ni(u)x land.
+ 
 Nothing special really. 
