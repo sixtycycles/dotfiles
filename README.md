@@ -8,7 +8,5 @@ stash this repo in ~. then run
 the file called `.secret_aliases` is all just ssh connections wrapped in an alias cause im lazy. 
 
 using, antigen and oh-my-zsh for plugins ect becase they're nice. 
-
-may work to varying degrees across U(li)ni(u)x land.
  
 Nothing special really. 
