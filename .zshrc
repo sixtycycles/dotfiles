@@ -1,6 +1,6 @@
 export TERM=xterm
 export WWW_HOME=https://duckduckgo.com
-
+#source ~/.bin/tmuxinator.zsh
 source ~/dotfiles/antigen.zsh
 source ~/dotfiles/.secret_aliases
 
