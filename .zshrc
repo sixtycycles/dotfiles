@@ -16,6 +16,7 @@ antigen bundle docker
 antigen bundle osx
 antigen bundle virtualenv
 antigen bundle robbyrussell/oh-my-zsh plugins/extract
+antigen bundle ansible
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme eastwood
