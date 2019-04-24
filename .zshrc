@@ -1,8 +1,13 @@
 export TERM=xterm
+#lynx homepage
 export WWW_HOME=https://duckduckgo.com
 #source ~/.bin/tmuxinator.zsh
 source ~/dotfiles/antigen.zsh
-source ~/dotfiles/.secret_aliases
+	
+if [[ -a ~/dotfiles/.secret_aliases ]]
+then
+	source ~/dotfiles/.secret_aliases
+fi
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -19,6 +24,7 @@ antigen bundle robbyrussell/oh-my-zsh plugins/extract
 antigen bundle ansible
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle powershell
 antigen theme eastwood
 antigen apply
 
