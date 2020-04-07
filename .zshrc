@@ -1,7 +1,4 @@
 export TERM=xterm
-#lynx homepage
-export WWW_HOME=https://duckduckgo.com
-#source ~/.bin/tmuxinator.zsh
 source ~/dotfiles/antigen.zsh
 	
 if [[ -a ~/dotfiles/.secret_aliases ]]
@@ -25,7 +22,7 @@ antigen bundle ansible
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle powershell
-antigen theme eastwood
+antigen theme romkatv/powerlevel10k
 antigen apply
 
 if [[ -n $SSH_CONNECTION ]]; then
@@ -54,3 +51,5 @@ chpwd_functions=(${chpwd_functions[@]} 'elel')
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
