@@ -13,6 +13,12 @@ then
 	source ~/dotfiles/.secret_aliases
 fi
 
+# make sure antigen is isntalled
+if [[ ! ( -a ~/dotfiles/antigen.zsh) ]]
+then 
+curl -L git.io/antigen > ~/dotfiles/antigen.zsh
+fi
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
