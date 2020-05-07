@@ -2,8 +2,9 @@
 various .files
 
 to use:
-stash this repo in ~. then run
-`ln -s ~/dotfiles/.zshrc /.zshrc`
+clone this repo in ~ then run
+` cd ~ `
+`ln -s ~/dotfiles/.zshrc ~/.zshrc`
 
 the file called `.secret_aliases` is all just ssh connections wrapped in an alias cause im lazy. 
 
