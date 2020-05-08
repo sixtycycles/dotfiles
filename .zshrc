@@ -6,10 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERM=xterm
-	
-if [[ -a ~/dotfiles/.secret_aliases ]]
+# if .secret_aliases is here, load it	
+if [[ -a ~/.secret_aliases ]]
 then
-	source ~/dotfiles/.secret_aliases
+	source ~/.secret_aliases
 fi
 
 # make sure antigen is isntalled
