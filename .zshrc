@@ -6,7 +6,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export TERM=xterm
-source ~/dotfiles/antigen.zsh
 	
 if [[ -a ~/dotfiles/.secret_aliases ]]
 then
@@ -14,11 +13,12 @@ then
 fi
 
 # make sure antigen is isntalled
-if [[ ! ( -a ~/dotfiles/antigen.zsh) ]]
+if [[ ! ( -a ~/antigen.zsh) ]]
 then 
-curl -L git.io/antigen > ~/dotfiles/antigen.zsh
+curl -L git.io/antigen > ~/antigen.zsh
 fi
 
+source ~/dotfiles/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
