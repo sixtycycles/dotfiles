@@ -18,7 +18,8 @@ then
 curl -L git.io/antigen > ~/antigen.zsh
 fi
 
-source ~/dotfiles/antigen.zsh
+source ~/antigen.zsh
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
