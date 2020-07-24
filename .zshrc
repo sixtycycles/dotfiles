@@ -12,6 +12,12 @@ then
 	source ~/.secret_aliases
 fi
 
+#make sure vundle is installed so we can use VIM plugins
+if [[ ! (-a ~/.vim/bundle/Vundle.vim) ]]
+then
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
 # make sure antigen is isntalled
 if [[ ! ( -a ~/antigen.zsh) ]]
 then 
@@ -67,3 +73,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
