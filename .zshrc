@@ -50,14 +50,14 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
    export LSCOLORS=ExFxBxDxCxegedabagacad
 
 #aliases stuff
-alias ll='ls -alhF'
-alias la='ls -Ah'
-alias lsl="ls -lhFA | less"
+alias ll='ls -alhFg'
+alias la='ls -Ahg'
+alias lsl="ls -lhFAg | less"
 
 #this does a ls on entry into a directory. 
 function elel(){
   emulate -L zsh
-  ls -lhaF
+  ls -lhaFg
 }
 chpwd_functions=(${chpwd_functions[@]} 'elel')
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
