@@ -25,17 +25,11 @@ curl -L git.io/antigen > ~/antigen.zsh
 fi
 
 source ~/antigen.zsh
-
-# Load the oh-my-zsh's library.
 antigen use oh-my-zsh
-
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle pip
 antigen bundle python
 antigen bundle django
-antigen bundle docker
-antigen bundle osx
 antigen bundle virtualenv
 antigen bundle robbyrussell/oh-my-zsh plugins/extract
 antigen bundle ansible
@@ -56,21 +50,17 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
    export LSCOLORS=ExFxBxDxCxegedabagacad
 
 #aliases stuff
-alias ll='ls -alh'
+alias ll='ls -alhF'
 alias la='ls -Ah'
-alias l='ls -CF'
-alias lsl="ls -lhA | less"
+alias lsl="ls -lhFA | less"
 
 #this does a ls on entry into a directory. 
 function elel(){
   emulate -L zsh
-  ls -lha
+  ls -lhaF
 }
 chpwd_functions=(${chpwd_functions[@]} 'elel')
-
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
